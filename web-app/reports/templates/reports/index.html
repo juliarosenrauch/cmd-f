@@ -1,0 +1,9 @@
+{% if latest_report_list %}
+    <ul>
+    {% for report in latest_report_list %}
+        <li><a href="{% url 'reports:detail' report.id %}">{{ report.pub_date }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No reports are available.</p>
+{% endif %}

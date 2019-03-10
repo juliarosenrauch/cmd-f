@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lex Sample</string>
+    <string name="screen_options_main_message">Amazon Lex</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="text_widget">Text widget</string>
+    <string name="call_widget">Call a friend</string>
+    <string name="map_widget">Route mapper</string>
+</resources>
