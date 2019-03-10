@@ -1,0 +1,17 @@
+<h1>{{ report.date }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<p><strong>Report Transcript</strong></p>
+<p>{{report.transcript}}</p>
+<div style="width: 450px"><iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q={{report.gps_lat}}%2C%20{{report.gps_long}}&ie=UTF8&t=&z=15&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Create route map</a></iframe></div><br />
+
+ <small>
+   <a 
+    href="https://maps.google.com/maps?q='{{report.gps_lat}}','{{report.gps_long}}'&hl=es;z=14&amp;output=embed" 
+    style="color:#0000FF;text-align:left" 
+    target="_blank"
+   >
+     See map bigger
+   </a>
+ </small>
