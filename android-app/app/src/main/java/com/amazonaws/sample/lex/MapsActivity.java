@@ -38,7 +38,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     ArrayList markerLocations = new ArrayList(); // Stores the location of the markers
     ArrayList markerObjects = new ArrayList(); // Stores the reference to the markers to be removed when clearing a route.
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
