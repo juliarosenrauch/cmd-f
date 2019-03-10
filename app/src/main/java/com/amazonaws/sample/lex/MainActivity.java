@@ -34,6 +34,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private static final int REQUEST_RECORDING_PERMISSIONS_RESULT = 75;
     private Button textDemoButton;
     private Button speechDemoButton;
+    private Button mapsDemoButton;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -56,8 +57,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         textDemoButton = (Button) findViewById(R.id.button_select_text);
         speechDemoButton = (Button) findViewById(R.id.button_select_voice);
+        mapsDemoButton = (Button) findViewById(R.id.button_select_map);
         textDemoButton.setOnClickListener(this);
         speechDemoButton.setOnClickListener(this);
+        mapsDemoButton.setOnClickListener(this);
 
         // Starting with Marshmallow we need to explicitly ask if we can record audio
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -96,6 +99,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
      */
     @Override
     public void onClick(final View v) {
+        Log.e("hello","clocked");
         switch ((v.getId())) {
             case R.id.button_select_text:
                 Intent textIntent = new Intent(this, TextActivity.class);
@@ -104,6 +108,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.button_select_voice:
                 Intent voiceIntent = new Intent(this, InteractiveVoiceActivity.class);
                 startActivity(voiceIntent);
+                break;
+            case R.id.button_select_map:
+                Intent mapsIntent = new Intent(this, MapsActivity.class);
+                Log.e("bing", "mapping");
+                startActivity(mapsIntent);
                 break;
         }
     }
