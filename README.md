@@ -43,3 +43,7 @@ This sample demonstrates how to use Amazon Lex interaction client library on And
     - Provision these resources: `amplify push`
 
 1. Run the app. Select Text Demo or Voice Demo as appropriate, and try out some of the sample utterance you have configured on the Amazon Lex console.
+
+## Generating the signed APK
+
+Password to `key0` in `mystore.keystore` is "bingbing", the keystore itself has been checked in against all good development sense.
