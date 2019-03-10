@@ -3,6 +3,9 @@ package com.amazonaws.sample.lex;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
+import android.widget.EditText;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -14,6 +17,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private EditText userTextInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +29,37 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        init();
     }
 
+    private void init() {
+        userTextInput = (EditText) findViewById(R.id.mapEditText);
+
+        // Set text edit listener.
+        userTextInput.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if ((event.getAction() == KeyEvent.ACTION_DOWN)
+                        && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    submitText();
+                    return true;
+                }
+                return false;
+            }
+        });
+        userTextInput.setEnabled(false);
+    }
+
+    private void submitText() {
+        String text = userTextInput.getText().toString();
+        // subnmit the text to googlemaps route api
+        
+        clearTextInput();
+    }
+
+    private void clearTextInput() {
+        userTextInput.setText("");
+    }
 
     /**
      * Manipulates the map once available.

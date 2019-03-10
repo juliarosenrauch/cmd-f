@@ -11,5 +11,4 @@
     android:background ="#FFFFFF">
 
     <include layout="@layout/options" />
-
 </RelativeLayout>

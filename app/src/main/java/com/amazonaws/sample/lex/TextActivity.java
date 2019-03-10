@@ -130,7 +130,7 @@ public class TextActivity extends Activity {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if ((event.getAction() == KeyEvent.ACTION_DOWN)
                         && (keyCode == KeyEvent.KEYCODE_ENTER)) {
-                    textEntered();
+                    submitText();
                     return true;
                 }
                 return false;
@@ -200,7 +200,7 @@ public class TextActivity extends Activity {
     /**
      * Read user text input.
      */
-    private void textEntered() {
+    private void submitText() {
         String text = userTextInput.getText().toString();
         if (!inConversation) {
             Log.d(TAG, " -- New conversation started");
