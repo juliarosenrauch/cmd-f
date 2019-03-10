@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/activity_button_height"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/button_select_text"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/activity_button_height"
+        android:layout_weight="1"
+        android:background="@drawable/button_selector"
+        android:text="@string/text_widget"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/activity_button_text_size" />
+
+    <Button
+        android:id="@+id/button_select_voice"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/activity_button_height"
+        android:layout_weight="1"
+        android:background="@drawable/button_selector"
+        android:text="@string/call_widget"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/activity_button_text_size" />
+
+    <Button
+        android:id="@+id/button_select_map"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/activity_button_height"
+        android:layout_weight="1"
+        android:background="@drawable/button_selector"
+        android:text="@string/map_widget"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/activity_button_text_size" />
+
+</LinearLayout>
