@@ -13,7 +13,7 @@
   },
   "Lex": {
     "REPLACED_BY_CLI": {
-      "Name": "BookTrip",
+      "Name": "HelpBot",
       "Alias": "Alias",
       "Region": "us-west-2"
     }
