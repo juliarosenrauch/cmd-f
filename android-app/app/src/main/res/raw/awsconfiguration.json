@@ -3,8 +3,8 @@
   "CredentialsProvider": {
     "CognitoIdentity": {
       "Default": {
-        "PoolId": "REPLACED_BY_CLI",
-        "Region": "REPLACED_BY_CLI"
+        "PoolId": "us-west-2:24e5cb22-f608-467b-ad92-8d7d6551a410",
+        "Region": "us-west-2"
       }
     }
   },
@@ -13,9 +13,9 @@
   },
   "Lex": {
     "REPLACED_BY_CLI": {
-      "Name": "REPLACED_BY_CLI",
-      "Alias": "REPLACED_BY_CLI",
-      "Region": "REPLACED_BY_CLI"
+      "Name": "BookTrip",
+      "Alias": "Alias",
+      "Region": "us-west-2"
     }
   }
 }
