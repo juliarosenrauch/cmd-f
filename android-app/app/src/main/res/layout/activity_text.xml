@@ -4,12 +4,20 @@
     android:id="@+id/activity_text"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_intra_group_separation"
-    android:paddingLeft="@dimen/activity_intra_group_separation"
-    android:paddingRight="@dimen/activity_intra_group_separation"
-    android:paddingTop="@dimen/activity_intra_group_separation"
-    android:background ="#FFFFFF">
+
+    android:background ="#d3ebf0"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_grad"
+        ></LinearLayout>
 
     <include layout="@layout/text_response_content" />
 
+    <include layout="@layout/options" />
 </RelativeLayout>
+
+
+

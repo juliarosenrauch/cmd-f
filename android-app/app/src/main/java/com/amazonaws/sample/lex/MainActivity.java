@@ -91,7 +91,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
             }
         }
     }
-
     /**
      * On-click listener for buttons text and voice buttons.
      *
@@ -116,4 +115,4 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
         }
     }
-}
+    }

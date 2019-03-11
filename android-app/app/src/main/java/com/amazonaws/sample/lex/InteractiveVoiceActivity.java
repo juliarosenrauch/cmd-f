@@ -16,8 +16,11 @@
 package com.amazonaws.sample.lex;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.amazonaws.mobile.client.AWSMobileClient;
@@ -56,6 +59,7 @@ public class InteractiveVoiceActivity extends Activity
     }
 
     private void init() {
+
         voiceView = findViewById(R.id.voiceInterface);
         voiceView.setInteractiveVoiceListener(this);
         AWSMobileClient.getInstance().initialize(this, new Callback<UserStateDetails>() {
@@ -122,4 +126,4 @@ public class InteractiveVoiceActivity extends Activity
     public void onError(final String responseText, final Exception e) {
         Log.e(TAG, "Error: " + responseText, e);
     }
-}
+    }
